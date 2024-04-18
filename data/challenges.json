@@ -1,0 +1,128 @@
+[
+	{
+		"name": "101",
+		"flags": [
+			"2003"
+				],
+		"points": 100
+	},
+	{
+		"name": "201",
+		"flags": [
+			"hello world"
+		],
+		"points": 200
+	},
+	{
+		"name": "301",
+		"flags": [
+			"seventeen"
+		],
+		"points": 300
+	},
+	{
+		"name": "102",
+		"flags": [
+			"bountihunti"
+		],
+		"points": 100
+	},
+	{
+		"name": "202",
+		"flags": [
+			"cyber security is cool (right?)#"
+		],
+		"points": 200
+	},
+	{
+		"name": "302",
+		"flags": [
+			"sepbafcb"
+		],
+		"points": 300
+	},
+	{
+		"name": "103",
+		"flags": [
+			"paris"
+		],
+		"points": 100
+	},
+	{
+		"name": "203",
+		"flags": [
+			"THEEYE,CSEA"
+		],
+		"points": 200
+	},
+	{
+		"name": "303",
+		"flags": [
+			"PUNTITE"
+		],
+		"points": 300
+	},
+	{
+		"name": "104",
+		"flags": [
+			"cseatheeye.com"
+		],
+		"points": 100
+	},
+	{
+		"name": "204",
+		"flags": [
+			"TURING"
+		],
+		"points": 200
+	},
+	{
+		"name": "304",
+		"flags": [
+			"welcome to syndicate"
+		],
+		"points": 300
+	},
+	{
+		"name": "105",
+		"flags": [
+			"reg-breach"
+		],
+		"points": 100
+	},
+	{
+		"name": "205",
+		"flags": [
+			"GOODBYE"
+		],
+		"points": 200
+	},
+	{
+		"name": "305",
+		"flags": [
+			"cryptixcypher"
+		],
+		"points": 300
+	},
+	{
+		"name": "106",
+		"flags": [
+			"so much work right?"
+		],
+		"points": 100
+	},
+	{
+		"name": "206",
+		"flags": [
+			"th1s_w4s_h4rd"
+		],
+		"points": 200
+	},
+	{
+		"name": "306",
+		"flags": [
+			"D 4 N G 3 R 5 3 3 K H 3 1 P"
+		],
+		"points": 300
+	}
+]

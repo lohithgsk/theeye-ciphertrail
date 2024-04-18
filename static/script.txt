@@ -1,0 +1,33 @@
+# Function to encrypt the plaintext using a Caesar cipher
+def encrypt(plaintext, shift):
+    encrypted_text = ""
+    for char in plaintext:
+        if char.isalpha():
+            is_upper = char.isupper()
+            shifted_char = chr(((ord(char.lower()) - ord('a') + shift) % 26) + ord('a'))
+            if is_upper:
+                shifted_char = shifted_char.upper()
+            encrypted_text += shifted_char
+        else:
+            encrypted_text += char
+    return encrypted_text
+
+# Function to decrypt the ciphertext using a Caesar cipher
+#def decrypt(ciphertext, shift):
+    
+    # <---complete function--->
+
+# Main function
+if __name__ == "__main__":
+
+    shift = 14
+    choice = int(input("Enter 1 to Encrypt Your Message And 2 to Decrypt a Encrypted Message: "))
+
+    if choice==1:
+        plaintext = input("Enter the text you want to encrypt: ")
+        encrypted_text = encrypt(plaintext, shift)
+        print("Encrypted Text:", encrypted_text)
+    '''elif choice==2:
+        todecrypt = input("Enter text to decrypt: ")
+        decrypted_text = decrypt(todecrypt, shift)
+        print("Decrypted Text:", decrypted_text)'''

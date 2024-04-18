@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bounty Hxnt | The Eye, CSEA</title>
+    <link rel="icon" href="https://i.imgur.com/ZAp9GVZ.png"/>
+    <!-- CSS -->
+    <style>
+      
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
+
+/* Base */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #a1a2af;
+  transition: 0.5s ease;
+}
+
+.dashboard {
+  max-width: 1250px;
+  min-height: 800px;
+  background: #f2f2f2;
+  margin: 50px auto;
+  display: flex;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.12);
+  overflow-x: hidden;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flex-sb {
+  justify-content: space-between;
+}
+
+.icon {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* End Base */
+
+/* Dashboard */
+
+/* =====Sidebar======= */
+.sidebar {
+  flex: 0 0 20%;
+  font-size: 22px;
+  padding: 25px;
+  align-items: flex-start;
+  background: #fff;
+  transition: background 0.5s ease-out;
+}
+
+.side-nav {
+  flex: 0 0 75%;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: #1e1e2d;
+  cursor: pointer;
+}
+
+.menu-item {
+  margin: 30px auto;
+  font-weight: 400;
+  transition: 0.4s linear;
+  cursor: pointer;
+  justify-content: start;
+}
+
+.menu-item p {
+  margin-left: 10px;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  color: #1e1e2d;
+}
+
+.border {
+  width: 100%;
+  height: 3px;
+  background: #f7f7f7;
+  border-radius: 1px;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.12);
+  margin: 50px 0;
+}
+
+.log-out .menu-item {
+  color: #fb6b63;
+}
+
+.log-out .menu-item:hover {
+  color: #f2615a;
+}
+
+/* =====Dashboard Content======= */
+.dashboard-content {
+  flex: 1;
+  padding: 25px;
+  background: #f9f9f9;
+  transition: 0.5s ease-out;
+}
+
+/* =====Topbar======= */
+.search {
+  flex: 1;
+  padding: 5px 10px;
+  background: #fff;
+  border-radius: 20px;
+}
+
+.search input {
+  width: 90%;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  color: #a1a2af;
+}
+
+.search ::-webkit-input-placeholder {
+  font-size: 18px;
+  font-weight: 400;
+  color: #a1a2af;
+  font-family: inherit;
+}
+
+.theme {
+  background: #fff;
+  margin: 0 20px;
+  border-radius: 20px;
+  font-size: 25px;
+  padding: 5px;
+}
+
+.dark,
+.light {
+  margin: 0 5px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.dark.active,
+.light.active {
+  background: #f9f9f9;
+}
+
+.light {
+  color: #fdb600;
+}
+
+.user {
+  background: #fff;
+  padding: 5px 10px;
+  color: #1e1e2d;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.user img {
+  width: 40px;
+}
+
+.user p {
+  margin: 0 6px;
+}
+
+.notification {
+  background: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+/* =====Section======= */
+
+.section {
+  margin: 30px 0;
+}
+
+/* =====Section Left======= */
+
+.section-left {
+  flex: 1;
+  padding: 15px;
+}
+
+.banner {
+  width: 100%;
+  height: 210px;
+  border-radius: 18px;
+  background: #55c960 url(https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/bannerBG.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.3s ease;
+  padding: 20px;
+  position: relative;
+  color: #fff;
+}
+
+.banner h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.banner img {
+  width: 420px;
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  pointer-events: none;
+}
+
+.btn {
+  padding: 14px 16px;
+  text-decoration: none;
+  display: inline-block;
+  background: #161622;
+  color: #fff;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 20px;
+  transition: 0.4s linear;
+}
+
+.nfts {
+  padding: 0 8px;
+  margin: 25px 0;
+}
+
+.heading h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1e1e2d;
+}
+
+.heading p {
+  font-size: 18px;
+  color: #38c947;
+  cursor: pointer;
+}
+
+/* =====Categories======= */
+
+.categories {
+  margin: 20px 0;
+}
+
+.category {
+  background: #fff;
+  padding: 6px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  color: #161622;
+  transition: 0.3s linear;
+}
+
+.category .icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 8px;
+  font-size: 22px;
+  background: #f2f2f2;
+  transition: 0.3s linear;
+}
+
+/* =====Browse NFTs======= */
+
+.browse {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.nft {
+  background: #fff;
+  padding: 10px 20px 20px 20px;
+  border-radius: 25px;
+  transition: 0.4s linear;
+  margin: 10px 5px;
+  min-width: 50%;
+}
+
+.nft img {
+  width: 100%;
+  height: 150px;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+.author img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 18px;
+  color: #161622;
+  font-weight: 600;
+  margin: 12px 0;
+}
+
+.author {
+  font-size: 14px;
+}
+
+.price {
+  background: rgba(124, 248, 136, 0.346);
+  padding: 12px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #38c947;
+  font-weight: 600;
+}
+
+/* =====Section Right======= */
+
+.section-right {
+  padding: 12px;
+  flex: 0 0 30%;
+  margin-top: -390px;
+}
+
+.graph {
+  width: 100%;
+  height: 200px;
+  background: #fff;
+  border-radius: 20px;
+  padding-top: 30px;
+  position: relative;
+  transition: 0.3s linear;
+}
+
+.graph h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 10px 0;
+  color: #161622;
+}
+
+.graph img {
+  width: 100%;
+  pointer-events: none;
+}
+
+.top-creators {
+  width: 100%;
+  margin-top: 40px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 20px;
+  transition: 0.3s linear;
+}
+
+.top-creators .heading {
+  margin-bottom: 20px;
+}
+
+.top-creators .heading h2 {
+  font-size: 18px;
+}
+
+.follow-creator img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.follow-creator h3 {
+  font-size: 13px;
+  color: #13131d;
+}
+
+.follow-creator p {
+  font-size: 12px;
+}
+
+.following {
+  font-size: 12px;
+  font-weight: 400;
+  padding: 8px 15px;
+  margin-bottom: 18px;
+}
+
+.follow {
+  background: #fdfdfd;
+  color: #13131d;
+  border: 1px solid rgba(161, 162, 175, 0.3);
+}
+
+/* End Dashboard */
+
+/* Dark Mode */
+.darkMode {
+  background: #13131d;
+}
+
+.darkMode .dashboard {
+  box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.22);
+}
+
+.darkMode .sidebar {
+  background: #161622;
+}
+
+.darkMode .menu-item:hover,
+.darkMode .menu-item.active,
+.darkMode .brand {
+  color: #fff;
+}
+
+.darkMode .log-out .menu-item:hover {
+  color: #f2615a;
+}
+
+.darkMode .border {
+  background: #262635;
+}
+
+.darkMode .dashboard-content {
+  background: #1e1e2d;
+}
+
+.darkMode .search,
+.darkMode .search input,
+.darkMode .user,
+.darkMode .theme,
+.darkMode .notification {
+  background: #161622;
+}
+
+.darkMode .user,
+.darkMode .notification,
+.darkMode .heading h2 {
+  color: #fff;
+}
+
+.darkMode .dark.active,
+.darkMode .light.active {
+  background: #1e1e2d;
+}
+
+.darkMode .banner {
+  background: #38c947 url(https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/bannerBG.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #161622;
+}
+
+.darkMode .btn {
+  background: #fff;
+  color: #161622;
+}
+
+.darkMode .category {
+  color: #fff;
+  background: #161622;
+}
+
+.darkMode .category .icon {
+  background: #262635;
+}
+
+.darkMode .nft {
+  background: #161622;
+}
+
+.darkMode .title {
+  color: #fff;
+}
+
+.darkMode .top-creators,
+.darkMode .graph {
+  background: #13131d;
+  border: none;
+}
+
+.darkMode .follow {
+  background: #13131d;
+  color: #fff;
+}
+
+.darkMode .graph h2,
+.darkMode .creator-details h3 {
+  color: #fff;
+}
+/* End Dark Mode */
+
+/* Responsive */
+@media (max-width: 1250px) {
+  .dashboard {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .sidebar {
+    padding: 20px;
+  }
+
+  .dashboard-content {
+    padding: 15px;
+  }
+
+  .category {
+    padding: 4px 12px;
+  }
+
+  .creator {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  .following {
+    margin: 5px 0;
+  }
+
+  .section-right {
+    margin-top: -265px;
+  }
+}
+
+@media (max-width: 1130px) {
+  .dashboard-content {
+    padding: 30px;
+  }
+
+  .section {
+    flex-direction: column;
+  }
+
+  .section-left {
+    width: 100%;
+  }
+
+  .section-right {
+    margin-top: 0;
+    width: 100%;
+    display: flex;
+  }
+
+  .graph {
+    width: 55%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid rgba(161, 162, 175, 0.3);
+  }
+
+  .top-creators {
+    width: 40%;
+    margin: 40px auto;
+    border: 1px solid rgba(161, 162, 175, 0.3);
+  }
+
+  .creator {
+    flex-direction: row;
+  }
+
+  .nft {
+    margin: 15px;
+  }
+
+  .nft img {
+    height: auto;
+  }
+
+  .sidebar {
+    padding: 20px 10px;
+    flex: 0 0 10%;
+    align-items: center;
+  }
+
+  .brand {
+    display: none;
+  }
+
+  .menu-item {
+    margin: 40px auto;
+  }
+
+  .menu-item p {
+    display: none;
+  }
+}
+
+@media (max-width: 780px) {
+  .dashboard-content {
+    padding: 0;
+  }
+
+  .banner {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .banner h2 {
+    font-size: 35px;
+  }
+
+  .text {
+    width: 100%;
+  }
+
+  .banner img {
+    display: none;
+  }
+
+  .search {
+    flex: 0 0 50px;
+    height: 50px;
+    width: 50px;
+  }
+
+  .search input {
+    display: none;
+  }
+
+  .topbar {
+    flex-direction: row-reverse;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  .trending {
+    padding: 0 20px;
+  }
+
+  .heading h2 {
+    font-size: 20px;
+  }
+
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .category {
+    margin: 10px auto;
+  }
+
+  .section-right {
+    flex-direction: column-reverse;
+  }
+
+  .top-creators {
+    width: 70%;
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar {
+    display: none;
+  }
+
+  .user {
+    margin-right: 10px;
+  }
+
+  .browse {
+    grid-template-columns: 1fr;
+  }
+
+  .section-left,
+  .section-right {
+    padding: 0;
+  }
+
+  .graph,
+  .top-creators,
+  .banner {
+    width: 90%;
+  }
+
+  .nft {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .notification,
+  .search {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .banner,
+  .browse {
+    width: 100%;
+  }
+
+  .graph,
+  .top-creators {
+    width: 95%;
+  }
+
+  .banner {
+    border-radius: 0;
+  }
+
+  .categories {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 300px) {
+  .topbar {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .user {
+    margin-bottom: 10px;
+  }
+
+  .banner h2 {
+    font-size: 30px;
+  }
+
+  .price {
+    text-align: center;
+    padding: 5px;
+  }
+}
+
+/* End  Responsive */
+
+
+
+/* YT LINK */
+
+
+.youtube {
+  position: fixed;
+  bottom: 40px;
+  right: 70px;
+  text-decoration: none;
+  padding: 8px 12px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 6px;
+  box-shadow: 0 2px 2px 3px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.youtube p {
+  font-size: 22px;
+}
+
+    </style>
+  </head>
+  <body style="background-image: url('/static/bg.gif');"style="width: 300%">
+    <!-- Dashboard -->
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <div class="sidebar flex-c flex-sb">
+        <div class="brand">Bounty Hxnt 2024<br/><br/><h5>CIPHER CHALLENGE</h5></div>
+        <div class="side-nav">
+
+          <div class="border"></div>
+          <div class="menu-item flex active">
+            <div class="icon">
+              <ion-icon name="grid"></ion-icon>
+            </div>
+
+            <p>Challenges</p>
+          </div>
+
+          <a style="text-decoration:none;color: inherit;" href="{{url_for('logout')}}"><div class="menu-item flex">
+            <div class="icon">
+              <ion-icon name="log-out-outline"></ion-icon>
+            </div>
+            <p>Logout</p>
+          </div></a>
+        </div>
+      </div>
+
+      <div class="dashboard-content">
+        <div class="topbar flex flex-sb">
+          <div class="theme flex">
+            <div class="dark flex">
+              <ion-icon name="moon-outline"></ion-icon>
+            </div>
+            <div class="light active flex">
+              <ion-icon name="sunny-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="user flex flex-sb" style="cursor:default;">
+            <img
+              src="https://i.imgur.com/ZAp9GVZ.png"
+              alt=""
+            />
+            <p>{{team["team-name"]}}</p>
+          </div>
+        </div>
+        <!-- ======End Topbar======= -->
+
+        <!-- ======Section======= -->
+        <div class="section flex flex-sb">
+          <!-- Section Left -->
+          <div class="section-left">
+            <div class="nfts">
+              <div class="trending heading flex flex-sb">
+                <h2>Solve Challenges</h2>
+              </div>
+
+              <!-- =====Browse NFT===== -->
+              <div class="browse">
+
+                <div class="nft">
+                  <div class="title">101</div>
+                  Encrypted Word: MjAwMw==
+                  <br/><br/>
+                  Clue: 64 bit computers were created in the 21st century by IBM, HP, etc. which now serves as the base standard for computers
+                  <br/><br/>
+                  <br/><br/>
+                  <p>Password: <br><br><input challengeName="101" onchange="verifyFlag()" type="text" value="{{prevalues[0] | safe}}" style="border-radius: 25px;padding:25px;" /></p><br/>
+                  <br/><br/>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <p>1 Password</p>
+                    </div>
+                    <div class="price" style="cursor: default;">100 Points</div>
+                  </div>
+                </div>
+
+                <div class="nft">
+                  <div class="title">201</div>
+                  Encrypted Word: 68 65 6c 6c 6f 20 77 6f 72 6c 64
+                  <br/><br/>
+                  The characters are encrypted with a code base space 16.
+                  <br/><br/>
+                  <br/><br/>
+                  <p>Password: <br><br><input challengeName="201" onchange="verifyFlag()" type="text" value="{{prevalues[1] | safe}}" style="border-radius: 25px;padding:25px;" /></p><br/>
+                  <br/><br/>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <p>1 Password</p>
+                    </div>
+                    <div class="price" style="cursor: default;">200 Points</div>
+                  </div>
+                </div>
+                
+                <div class="nft" style="width:198%;">
+                  <div class="title">301</div>
+                  Encrypted Word: 2c5abdef2a0eacb49f5115991a9331e8f78c5a15f986426815fd9486b5230628
+                  
+                  <br><br>Clue: Hashing is the process of transforming any given key or a string of characters into another value. The most popular hashing algorithms include MD5, MD6, SHA-1, RIPEMD, SHA-2, SHA-256 and more.
+                  <br><br>
+                  <br><br>
+                  <p>Password: &nbsp;&nbsp;&nbsp;<input challengename="301" onchange="verifyFlag()" type="text" value="{{prevalues[2] | safe}}" style="border-radius: 25px;padding:25px;width: 50%;"></p><br>
+                  <br><br>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <p>1 Password</p>
+                    </div>
+                    <div class="price" style="cursor: default;">300 Points</div>
+                  </div>
+                </div>
+                <br>
+
+                <div class="nft">
+                  <div class="title">102</div>
+                  In 1869, Russian chemist Dmitri Mendeleev arranged 63 elements by increasing atomic weight in several columns, 
+                  noting recurring chemical properties across them.
+                  By recognizing the properties of one element, the properties of other elements and their compounds in the group are imagined, 
+                  which makes the analysis of elements simpler.
+                  <br/><br/>
+                  Encrypted Text: 5 8 92 7 81 1 92 7 81
+                  
+                  
+                  <br/>
+                  (ALL SMALL, NO SPACES)
+                  <br/><br/>
+                  <p>Password: <br><br><input challengeName="102" onchange="verifyFlag()" type="text" value="{{prevalues[4] | safe}}" style="border-radius: 25px;padding:25px;" /></p><br/>
+                  <br/><br/>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <p>1 Password</p>
+                    </div>
+                    <div class="price" style="cursor: default;">100 Points</div>
+                  </div>
+                </div>
+
+                <div class="nft">
+                  <div class="title">202</div>
+                  Encrypted Word: cyber%20security%20is%20cool
+                  %28right%3F%29%23
+                  <br/><br/>
+                  Did you know URLs swap spaces with %20, as well as swaps special characters such as (), #.
+                  <br/><br/>
+                  <br/><br/>
+                  <p>Password: <br><br><input challengeName="202" onchange="verifyFlag()" type="text" value="{{prevalues[5] | safe}}" style="border-radius: 25px;padding:25px;" /></p><br/>
+                  <br/><br/>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <p>1 Password</p>
+                    </div>
+                    <div class="price" style="cursor: default;">200 Points</div>
+                  </div>
+                </div>
+                
+                <div class="nft" style="width:198%;">
+                  <div class="title">302</div>
+                  <code>Solve the crossword puzzle and arrange the first letters of the following words 11 6 7 4 5 9 2 3</code>
+
+                  <br><br>
+
+                  Click here: <a href="https://crosswordlabs.com/embed/bountyhxnt-the-eye" target=”_blank”>Bounty-Hxnt_Crossword</a>
+                  
+                  <br><br>
+                  <br><br>
+                  <p>Password: &nbsp;&nbsp;&nbsp;<input challengename="302" onchange="verifyFlag()" type="text" value="{{prevalues[6] | safe}}" style="border-radius: 25px;padding:25px;width: 50%;"></p><br>
+                  <br><br>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <p>1 Password</p>
+                    </div>
+                    <div class="price" style="cursor: default;">300 Points</div>
+                  </div>
+                </div>
+                <br>
+
+                <div class="nft">
+                  <div class="title">103</div>
+                  Encrypted Word: 48.8584, 2.2945
+                  <br/><br/>
+                  Clue: Did you know its illegal to post pictures of this place at night? It could be a coordinate to wonder about. What is the name of the City it's located in? all lowercase.
+                  <br/><br/>
+                  <br/><br/>
+                  <p>Password: <br><br><input challengeName="103" onchange="verifyFlag()" type="text" value="{{prevalues[7] | safe}}" style="border-radius: 25px;padding:25px;" /></p><br/>
+                  <br/><br/>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <p>1 Password</p>
+                    </div>
+                    <div class="price" style="cursor: default;">100 Points</div>
+                  </div>
+                </div>
+
+                <div class="nft">
+                  <div class="title">203</div>
+                  Encrypted Word: <br>
+                  - .... . <br>
+                  . -.-- . --..-- <br>
+                  -.-. ... . .- <br>
+                  
+                  <br/><br/>
+                  Clue: Militaries and secret organizations utilize this language to communicate in silence and without the enemies finding out.
+                  <br/><br/>
+                  <br/><br/>
+                  <p>Password: <br><br><input challengeName="203" onchange="verifyFlag()" type="text" value="{{prevalues[8] | safe}}" style="border-radius: 25px;padding:25px;" /></p><br/>
+                  <br/><br/>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <p>1 Password</p>
+                    </div>
+                    <div class="price" style="cursor: default;">200 Points</div>
+                  </div>
+                </div>
+                
+                <div class="nft" style="width:198%;">
+                  <div class="title">303</div>
+                  <br/>
+                  King Tutankhamun, although died young was very much intrigued by a mysterious trading partner of ancient Egypt, hinted at in hieroglyphic inscriptions and trade records. Despite its prominence in Egyptian history, 
+                  this enigmatic land remains elusive. By deciphering Egyptian hieroglyphs and analyzing archaeological remnants, researchers aim to unveil the identity and significance of this ancient trading partner.
+                  Understanding this relationship sheds light on the dynamics of ancient civilizations and their interconnected trade routes, offering invaluable insights into the history and culture of the region.<br>
+                  <br>Before dying, tut left a message to you. It is upto you to decide the fate of Somalia!
+                  <br>
+                  Analyze the image given below<br><br>
+                  <img src="https://files.cseatheeye.com/Events/public/bounty_hxnt/theFallenShallRiseAgain.png" style="height: auto !important">
+                  <br/><br/>
+                  Clue: Tut died in the age 13 hundreds. And his body was rotated 13 times before burying as a sacrifice to Ra.
+                  <br/><br/>
+                  <p>Password: (ALL CAPS) <br><br><input challengeName="303" onchange="verifyFlag()" type="text" value="{{prevalues[16] | safe}}" style="border-radius: 25px;padding:25px;" /></p><br/>
+                  <br/><br/>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <p>1 Password</p>
+                    </div>
+                    <div class="price" style="cursor: default;">300 Points</div>
+                  </div>
+                </div>
+                <br>
+
+                <div class="nft">
+                  <div class="title">104</div>
+                  JIG SAWS ROCK!!!
+                  <br/><br/>
+                  Solve the puzzle: <a href="https://puzzel.org/en/jigsaw/play?p=-NrLoaUGlUBJdOI9ODzZ" target=”_blank”>Link!!!</a>
+                  <br/><br/>
+                  <br/><br/>
+                  <p>Password: <br><br><input challengeName="104" onchange="verifyFlag()" type="text" value="{{prevalues[10] | safe}}" style="border-radius: 25px;padding:25px;" /></p><br/>
+                  <br/><br/>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <p>1 Password</p>
+                    </div>
+                    <div class="price" style="cursor: default;">100 Points</div>
+                  </div>
+                </div>
+
+                <div class="nft">
+                  <div class="title">204</div>
+                  During World War II, the Germans used the Enigma, a cipher machine, 
+                  to develop nearly unbreakable codes for sending secret messages.The Enigma’s settings 
+                  offered 150 quintillion possible solutions, yet the Allies were eventually able to crack its code.
+                  <br><br>
+                  Hitler left this last message to be decoded by YOU!!! Deocde the message to win the war.
+                  <br><br>
+                  Encrypted Message: OVXQCZ
+                  <br>                 
+                  <br/><br/>
+                  <p>Password (ALL CAP): <br><br><input challengeName="204" onchange="verifyFlag()" type="text" value="{{prevalues[11] | safe}}" style="border-radius: 25px;padding:25px;" /></p><br/>
+                  <br/><br/>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <p>1 Password</p>
+                    </div>
+                    <div class="price" style="cursor: default;">200 Points</div>
+                  </div>
+                </div>
+                
+                <div class="nft" style="width:198%;">
+                  <div class="title">304</div>
+                  Encrypted Text:<br>
+                  .-- . .-.. -.-. --- -- . <br>
+                  01110100 01101111<br>
+                  115 121 110 100 105 99 97 116 101
+
+                  <br><br>Clue: ASCII assigns standard numeric values to letters, numerals, punctuation marks, and other characters used in computers.
+                  <br><br>
+                  <br><br>
+                  <p>Password: &nbsp;&nbsp;&nbsp;<input challengename="304" onchange="verifyFlag()" type="text" value="{{prevalues[12] | safe}}" style="border-radius: 25px;padding:25px;width: 50%;"></p><br>
+                  <br><br>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <p>1 Password</p>
+                    </div>
+                    <div class="price" style="cursor: default;">300 Points</div>
+                  </div>
+                </div>
+                <br>
+
+                <div class="nft">
+                  <div class="title">105</div>
+                  <a href="/static/ReadFully.txt" target="_blank">click here to download file</a>
+                  <br/><br/>
+                  Clue: Make Sure To Read Fullyyyyy you might find a series of secret codes :)
+                  <br/><br/>
+                  <br/><br/>
+                  <p>Password: <br><br><input challengeName="105" onchange="verifyFlag()" type="text" value="{{prevalues[13] | safe}}" style="border-radius: 25px;padding:25px;" /></p><br/>
+                  <br/><br/>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <p>1 Password</p>
+                    </div>
+                    <div class="price" style="cursor: default;">100 Points</div>
+                  </div>
+                </div>
+
+                <div class="nft">
+                  <div class="title">205</div>
+                  The Allies have intercepted your message and have retaliated by leaving you a special message.
+                  <br>Help Hitler decode the message. Heil Hitler!!!
+                  <br>                 
+                  <br/><br/>
+                  Encrypted Message: XINLSBK
+                  
+                  <br/><br/>
+                  <br/><br/>
+                  <p>Password (ALL CAPS): <br><br><input challengeName="205" onchange="verifyFlag()" type="text" value="{{prevalues[14] | safe}}" style="border-radius: 25px;padding:25px;" /></p><br/>
+                  <br/><br/>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <p>1 Password</p>
+                    </div>
+                    <div class="price" style="cursor: default;">200 Points</div>
+                  </div>
+                </div>
+                
+                <div class="nft" style="width:198%;">
+                  <div class="title">305</div>
+                  <a href="/static/script.txt" target="_blank">click here to download file</a>
+
+                  <br><br>Clue: Complete me to get what you want.
+                  Here's what you need to decode 'qfmdhwlqmdvsf'
+                  Complete the function left incomplete and pass the above enrypted text as the text to decrypt.
+                  <br><br>
+                  <br><br>
+                  <p>Password: &nbsp;&nbsp;&nbsp;<input challengename="305" onchange="verifyFlag()" type="text" value="{{prevalues[15] | safe}}" style="border-radius: 25px;padding:25px;width: 50%;"></p><br>
+                  <br><br>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <p>1 Password</p>
+                    </div>
+                    <div class="price" style="cursor: default;">300 Points</div>
+                  </div>
+                </div><br>
+                
+                <div class="nft">
+                  <div class="title">106</div>
+                  Encrypted Image:<br><br>
+                  <img src="/static/qr1.png" style="width: 165px">
+
+                  <br><br>Clue: A QR can hold text, this text if encrypted with basic operations such as Hex, Octal, Base64 or other algorithms can remain more secure than text without encryption.
+                  <br><br>
+                  <br><br>
+                  <p>Password: &nbsp;&nbsp;&nbsp;<input challengename="106" onchange="verifyFlag()" type="text" value="{{prevalues[9] | safe}}" style="border-radius: 25px;padding:25px;width: 50%;"></p><br>
+                  <br><br>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <p>1 Password</p>
+                    </div>
+                    <div class="price" style="cursor: default;">100 Points</div>
+                  </div>
+                </div>
+
+                <div class="nft">
+                  <div class="title">206</div>
+                  Convert the binary and then,
+                  mod each number by 37 and map it to the following character set: 
+                  0-25 is the alphabet (uppercase), 26-35 are the decimal digits, and 36 is an underscore.
+
+                  <br><br>
+                  
+                  Click here: <a href="/static/binary.txt" target=”_blank”>Text File</a>
+                  <br>
+                  
+                  <br/><br/>
+                  <p>Password: <br><br><input challengeName="206" onchange="verifyFlag()" type="text" value="{{prevalues[17] | safe}}" style="border-radius: 25px;padding:25px;" /></p><br/>
+                  <br/><br/>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <p>1 Password</p>
+                    </div>
+                    <div class="price" style="cursor: default;">200 Points</div>
+                  </div>
+                </div>
+                
+                <div class="nft" style="width:198%;">
+                  <div class="title">306</div>
+                  <a href="/static/script.txt" target="_blank"></a>
+                  In the year 2023, airplanes had become marvels of engineering, fully automated and integrated with the latest cybersecurity protocols to ensure passenger safety.
+                  However, even the most sophisticated systems could still be vulnerable in unexpected ways.
+                  <br><br>
+                  Captain John Mitchell takes control of Flight 447, a technologically advanced plane en route from New York to London. However, 
+                  cybercriminals breach the plane's cybersecurity, seizing control of its systems. The passengers panic as the plane's trajectory changes and alarms blare. In his cabin, Captain Mitchell uses the SOS to seek help.
+                  <br><br>
+                  Use the audio file attached to get a code.
+                  HINT: Solve the code below using a caesar cypher key that can be obtained by solving the below equation.<br><br>
+                  ((36 x 3) + 13 ) / 11<br><br>
+                  Click here: <a href="/static/morse.wav">Audio File</a>
+                  <br><br>
+                  <p>Password: &nbsp;&nbsp;&nbsp;<input challengename="306" onchange="verifyFlag()" type="text" value="{{prevalues[18] | safe}}" style="border-radius: 25px;padding:25px;width: 50%;"></p><br>
+                  <br><br>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <p>1 Password</p>
+                    </div>
+                    <div class="price" style="cursor: default;">300 Points</div>
+                  </div>
+                </div>
+                
+                <script>
+                function verifyFlag() {
+                  // Get the input element that triggered the onchange event
+                  const input = event.target;
+                  // Get the challengeName attribute from the input element
+                  const challengeName = input.getAttribute('challengeName');
+                  // Get the value of the input element
+                  const flag = input.value;
+                  // Send an AJAX request to the server to verify the flag
+                  const xhr = new XMLHttpRequest();
+                  xhr.open('POST', '/verify-flag', true);
+                  xhr.setRequestHeader('Content-Type', 'application/json');
+                  xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4) {
+                      if (xhr.status === 200) {
+                        // If the server returns "true", change the border color to green
+                        if (xhr.responseText === 'true') {
+                          input.style.borderColor = 'green';
+                          input.style.backgroundColor = "#D2FDD6";
+                          input.disabled = true;
+                        } else {
+                          // Otherwise, change the border color back to default
+                          input.style.borderColor = '';
+                          input.style.backgroundColor = "";
+                          input.disabled = false;
+                        }
+                      } else {
+                        console.error('Error verifying flag:', xhr.statusText);
+                      }
+                    }
+                  };
+                  xhr.send(JSON.stringify({
+                    challengeName: challengeName,
+                    flag: flag
+                  }));
+                }
+                </script>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Section Right -->
+          <div class="section-right">
+            <div class="graph flex-c">
+              <p>Points</p>
+              <h2 id="PointsHere"></h2>
+              <script>
+              function updatePoints() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                  if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("PointsHere").innerHTML = this.responseText;
+                  }
+                };
+                xhttp.open("GET", "/get-points", true);
+                xhttp.send();
+              }
+
+              // Update the points every 5 seconds
+              setInterval(updatePoints, 1000);
+              </script>
+
+              <img
+                src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/graph.svg"
+                alt=""
+              />
+            </div>
+
+            <div class="top-creators">
+              <div class="heading flex flex-sb">
+                <h2>Top Hackers</h2>
+              </div>
+
+              {% for team in topTeams %}
+
+              <div class="creator flex flex-sb">
+                <div class="follow-creator flex">
+                  <img
+                    src="https://p1.hiclipart.com/preview/374/971/748/hacker-logo-anonymous-ayyildiz-team-anonymity-security-hacker-hacktivism-guy-fawkes-mask-drawing-png-clipart.jpg" style="border-radius: 50%;"
+                    alt=""
+                  />
+                  <div class="creator-details">
+                    <h3>{{team["team-name"]}}</h3>
+                    {% set names = team["team-members"] | map(attribute='name') | join(', ') %}
+                    <p>{{names}}</p>
+                  </div>
+                </div>
+                <a class="btn following">#{{loop.index}}</a>
+              </div>
+
+              {% endfor %}
+
+
+            </div>
+          </div>
+        </div>
+        <!-- ======End Section======= -->
+      </div>
+      <!-- End Dashboard Content -->
+    </div>
+    <!-- End Dashboard -->
+    <!-- Ion Icons Js -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+
+    <!-- JS -->
+    <script>
+    const dark = document.querySelector(".dark");
+const light = document.querySelector(".light");
+
+dark.addEventListener("click", function () {
+  document.querySelector("body").classList.add("darkMode");
+  light.classList.remove("active");
+  dark.classList.add("active");
+});
+
+light.addEventListener("click", function () {
+  document.querySelector("body").classList.remove("darkMode");
+  dark.classList.remove("active");
+  light.classList.add("active");
+});
+</script>
+  </body>
+</html>

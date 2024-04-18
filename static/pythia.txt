@@ -1,0 +1,65 @@
+'''
+Implement the function
+    - fibonacci_series(n) -> generate the fibonacci series upto n numbers.
+    - generate_primes(limit) -> generate all prime numbers until the give n number.
+    - collatz_sequence(n) ->  generate the collatz sequence for the given number n.
+
+For example:
+Output 
+    - fibonacci_series(5) -> [0,1,1,2,3]
+    - generate_primes(5) -> [2,3,5]
+    - collatz_sequence(5) -> [5,16,8,4,2,1]
+
+The outputs of every single function MUST be a list
+Do not print the output, instead return it.
+Modify only the TO-DO parts of the code. DO NOT change anything else.
+'''
+
+
+def fibonacci_series(n):
+    # TO-DO: Complete here!
+
+def generate_primes(limit):
+    # TO-DO: Complete here!
+
+def collatz_sequence(n):
+    # TO-DO: Complete here!
+
+
+fibbo = fibonacci_series(50)
+primo = generate_primes(50)
+colatzo = collatz_sequence(50)
+
+print(fibbo)
+print(primo)
+print(colatzo)
+
+print(len(fibbo))
+print(len(primo))
+print(len(colatzo))
+
+def generate_password(fibbo, primo, colatzo):
+    password_list = []
+    password_list.append((fibbo[23]+primo[11]+colatzo[13])%50)
+    password_list.append((fibbo[22]+primo[14]+colatzo[14])%50)
+    password_list.append((fibbo[13]+primo[0]+colatzo[19])%50)
+    password_list.append((fibbo[3]+primo[2]+colatzo[15])%50)
+    password_list.append((fibbo[16]+primo[5]+colatzo[18])%50)
+    password_list.append((fibbo[26]+primo[7]+colatzo[21])%50)
+    password_list.append((fibbo[33]+primo[9]+colatzo[24])%50)
+    password_list.append((fibbo[42]+primo[10]+colatzo[22])%50)
+    password_list.append((fibbo[49]+primo[12]+colatzo[20])%50)
+    password_list.append((fibbo[1]+primo[13]+colatzo[0])%50)
+    password_list.append((fibbo[9]+primo[6]+colatzo[6])%50)
+    password_list.append((fibbo[11]+primo[4]+colatzo[9])%50)
+    password_list.append((fibbo[29]+primo[1]+colatzo[10])%50)
+
+    password_char = [
+    'A', '1', 'B2', '3', 'C', '45', 'D6', '7', 'E', '89', 'F10', '11', 'G', '12H', 'I13', '14', 'J', 'K15', '16',
+    'L', 'M17', 'N18', '19', 'O', '20P', '21', 'Q', '22R', 'S23', '24', 'T', 'U25', 'V26', '27', 'W', '28X', 'Y29',
+    '30', 'Z', '31', '32A', 'B33', '34', 'C', '35D', '36', 'E37', '38', 'F', 'G39', 'H40']
+
+    for i in password_list:
+        print("".join(password_char[i]),end="")
+
+generate_password(fibbo,primo,colatzo)

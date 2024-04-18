@@ -1,0 +1,477 @@
+[
+    {
+        "team-name": "Doodlebug",
+        "team-members": [],
+        "solved": [],
+        "points": 0
+    },
+    {
+        "team-name": "Munchkin",
+        "team-members": [],
+        "solved": [],
+        "points": 0
+    },
+    {
+        "team-name": "Wigglypaws",
+        "team-members": [],
+        "solved": [],
+        "points": 0
+    },
+    {
+        "team-name": "Snuffles",
+        "team-members": [],
+        "solved": [],
+        "points": 0
+    },
+    {
+        "team-name": "Gingersnap",
+        "team-members": [],
+        "solved": [],
+        "points": 0
+    },
+    {
+        "team-name": "Jackalope",
+        "team-members": [],
+        "solved": [],
+        "points": 0
+    },
+    {
+        "team-name": "Pudding",
+        "team-members": [],
+        "solved": [],
+        "points": 0
+    },
+    {
+        "team-name": "Jellybean",
+        "team-members": [],
+        "solved": [],
+        "points": 0
+    },
+    {
+        "team-name": "Whiskers",
+        "team-members": [],
+        "solved": [],
+        "points": 0
+    },
+    {
+        "team-name": "Fuzzball",
+        "team-members": [],
+        "solved": [],
+        "points": 0
+    },
+    {
+        "team-name": "Buttercup",
+        "team-members": [],
+        "solved": [],
+        "points": 0
+    },
+    {
+        "team-name": "Thanos",
+        "team-members": [],
+        "solved": [],
+        "points": 0
+    },
+    {
+        "team-name": "Kratos",
+        "team-members": [],
+        "solved": [],
+        "points": 0
+    },
+    {
+        "team-name": "Zeus",
+        "team-members": [],
+        "solved": [],
+        "points": 0
+    },
+    {
+        "team-name": "Hades",
+        "team-members": [],
+        "solved": [],
+        "points": 0
+    },
+    {
+        "team-name": "Loki",
+        "team-members": [],
+        "solved": [
+            "2003",
+            "hello world",
+            "seventeen",
+            "bountihunti",
+            "cyber security is cool (right?)#",
+            "sepbafcb",
+            "paris",
+            "THEEYE,CSEA",
+            "PUNTITE",
+            "cseatheeye.com",
+            "TURING",
+            "welcome to syndicate",
+            "reg-breach",
+            "GOODBYE",
+            "cryptixcypher",
+            "so much work right?",
+            "th1s_w4s_h4rd",
+            "D 4 N G 3 R 5 3 3 K H 3 1 P",
+            "Iamh2vin8gsOmuC4Fxun"
+        ],
+        "points": 3900.0
+    },
+    {
+        "team-name": "Basilisk",
+        "team-members": [],
+        "solved": [
+            "2003",
+            "hello world",
+            "seventeen",
+            "sepbafcb",
+            "paris",
+            "bountihunti",
+            "cyber security is cool (right?)#",
+            "THEEYE,CSEA",
+            "cseatheeye.com",
+            "welcome to syndicate",
+            "so much work right?"
+        ],
+        "points": 2000.0
+    },
+    {
+        "team-name": "Fluffykins",
+        "team-members": [],
+        "solved": [
+            "cseatheeye.com"
+        ],
+        "points": 100.0
+    },
+    {
+        "team-name": "Hydra",
+        "team-members": [],
+        "solved": [
+            "hello world",
+            "paris",
+            "sepbafcb",
+            "THEEYE,CSEA",
+            "cseatheeye.com",
+            "seventeen",
+            "welcome to syndicate",
+            "bountihunti"
+        ],
+        "points": 1600.0
+    },
+    {
+        "team-name": "Sphinx",
+        "team-members": [],
+        "solved": [
+            "2003",
+            "hello world",
+            "cyber security is cool (right?)#",
+            "paris",
+            "THEEYE,CSEA",
+            "sepbafcb",
+            "bountihunti",
+            "cseatheeye.com",
+            "welcome to syndicate",
+            "seventeen"
+        ],
+        "points": 1900.0
+    },
+    {
+        "team-name": "Phoenix",
+        "team-members": [],
+        "solved": [
+            "hello world",
+            "THEEYE,CSEA",
+            "paris",
+            "cseatheeye.com",
+            "welcome to syndicate",
+            "so much work right?",
+            "sepbafcb",
+            "2003",
+            "seventeen",
+            "bountihunti",
+            "th1s_w4s_h4rd",
+            "cyber security is cool (right?)#"
+        ],
+        "points": 2200.0
+    },
+    {
+        "team-name": "Centaur",
+        "team-members": [],
+        "solved": [
+            "2003",
+            "hello world",
+            "THEEYE,CSEA",
+            "paris",
+            "seventeen",
+            "bountihunti",
+            "sepbafcb",
+            "so much work right?",
+            "welcome to syndicate",
+            "cseatheeye.com",
+            "cyber security is cool (right?)#"
+        ],
+        "points": 2000.0
+    },
+    {
+        "team-name": "Viper",
+        "team-members": [],
+        "solved": [
+            "hello world",
+            "2003",
+            "cyber security is cool (right?)#",
+            "paris",
+            "THEEYE,CSEA",
+            "seventeen",
+            "bountihunti",
+            "sepbafcb",
+            "so much work right?",
+            "welcome to syndicate",
+            "cseatheeye.com"
+        ],
+        "points": 2000.0
+    },
+    {
+        "team-name": "Pegasus",
+        "team-members": [],
+        "solved": [
+            "2003",
+            "seventeen",
+            "cyber security is cool (right?)#",
+            "hello world",
+            "THEEYE,CSEA",
+            "so much work right?",
+            "paris",
+            "bountihunti",
+            "cseatheeye.com",
+            "welcome to syndicate",
+            "D 4 N G 3 R 5 3 3 K H 3 1 P",
+            "cryptixcypher"
+        ],
+        "points": 2300.0
+    },
+    {
+        "team-name": "Minotaur",
+        "team-members": [],
+        "solved": [
+            "2003",
+            "hello world",
+            "seventeen",
+            "bountihunti",
+            "cyber security is cool (right?)#",
+            "THEEYE,CSEA",
+            "sepbafcb",
+            "paris",
+            "welcome to syndicate",
+            "so much work right?",
+            "cseatheeye.com",
+            "cryptixcypher"
+        ],
+        "points": 2300.0
+    },
+    {
+        "team-name": "Reyna",
+        "team-members": [],
+        "solved": [
+            "hello world",
+            "paris",
+            "cseatheeye.com",
+            "sepbafcb",
+            "THEEYE,CSEA",
+            "2003",
+            "so much work right?",
+            "cyber security is cool (right?)#",
+            "welcome to syndicate"
+        ],
+        "points": 1600.0
+    },
+    {
+        "team-name": "Thunderbird",
+        "team-members": [],
+        "solved": [
+            "2003",
+            "hello world",
+            "paris",
+            "cyber security is cool (right?)#",
+            "welcome to syndicate",
+            "so much work right?"
+        ],
+        "points": 1000.0
+    },
+    {
+        "team-name": "Gryphon",
+        "team-members": [],
+        "solved": [
+            "2003",
+            "hello world",
+            "seventeen",
+            "cyber security is cool (right?)#",
+            "THEEYE,CSEA",
+            "sepbafcb",
+            "paris",
+            "cseatheeye.com",
+            "welcome to syndicate",
+            "so much work right?",
+            "D 4 N G 3 R 5 3 3 K H 3 1 P",
+            "reg-breach"
+        ],
+        "points": 2300.0
+    },
+    {
+        "team-name": "Sage",
+        "team-members": [],
+        "solved": [
+            "hello world",
+            "2003",
+            "cyber security is cool (right?)#",
+            "THEEYE,CSEA",
+            "paris",
+            "cseatheeye.com",
+            "welcome to syndicate",
+            "so much work right?",
+            "seventeen",
+            "bountihunti",
+            "sepbafcb",
+            "TURING",
+            "GOODBYE",
+            "cryptixcypher",
+            "th1s_w4s_h4rd"
+        ],
+        "points": 2900.0
+    },
+    {
+        "team-name": "Kraken",
+        "team-members": [],
+        "solved": [
+            "THEEYE,CSEA",
+            "seventeen",
+            "hello world",
+            "cyber security is cool (right?)#",
+            "paris",
+            "sepbafcb",
+            "cseatheeye.com",
+            "welcome to syndicate",
+            "so much work right?",
+            "2003",
+            "D 4 N G 3 R 5 3 3 K H 3 1 P",
+            "GOODBYE"
+        ],
+        "points": 2400.0
+    },
+    {
+        "team-name": "Chimera",
+        "team-members": [],
+        "solved": [
+            "cseatheeye.com",
+            "paris",
+            "hello world",
+            "welcome to syndicate",
+            "THEEYE,CSEA",
+            "2003",
+            "bountihunti",
+            "seventeen",
+            "cyber security is cool (right?)#",
+            "so much work right?"
+        ],
+        "points": 1700.0
+    },
+    {
+        "team-name": "Hippogriff",
+        "team-members": [],
+        "solved": [
+            "hello world",
+            "2003",
+            "seventeen",
+            "cyber security is cool (right?)#",
+            "THEEYE,CSEA",
+            "sepbafcb",
+            "cseatheeye.com",
+            "paris",
+            "welcome to syndicate",
+            "bountihunti",
+            "cryptixcypher"
+        ],
+        "points": 2200.0
+    },
+    {
+        "team-name": "Mermaid",
+        "team-members": [],
+        "solved": [
+            "2003",
+            "hello world",
+            "THEEYE,CSEA",
+            "paris",
+            "cseatheeye.com",
+            "welcome to syndicate",
+            "sepbafcb",
+            "so much work right?",
+            "cryptixcypher",
+            "cyber security is cool (right?)#",
+            "bountihunti",
+            "seventeen"
+        ],
+        "points": 2300.0
+    },
+    {
+        "team-name": "Cyclops",
+        "team-members": [],
+        "solved": [
+            "2003",
+            "hello world",
+            "paris",
+            "sepbafcb",
+            "cyber security is cool (right?)#",
+            "cseatheeye.com",
+            "welcome to syndicate",
+            "seventeen",
+            "so much work right?",
+            "cryptixcypher"
+        ],
+        "points": 2000.0
+    },
+    {
+        "team-name": "Apollo",
+        "team-members": [],
+        "solved": [
+            "2003",
+            "seventeen",
+            "cyber security is cool (right?)#",
+            "sepbafcb",
+            "paris",
+            "THEEYE,CSEA",
+            "PUNTITE",
+            "cseatheeye.com",
+            "welcome to syndicate",
+            "cryptixcypher"
+        ],
+        "points": 2200.0
+    },
+    {
+        "team-name": "Ptolemy",
+        "team-members": [],
+        "solved": [
+            "2003",
+            "hello world",
+            "bountihunti",
+            "paris",
+            "PUNTITE",
+            "cseatheeye.com",
+            "reg-breach",
+            "seventeen",
+            "cyber security is cool (right?)#",
+            "THEEYE,CSEA",
+            "welcome to syndicate",
+            "cryptixcypher",
+            "th1s_w4s_h4rd"
+        ],
+        "points": 2500.0
+    },
+    {
+        "team-name": "Pickles",
+        "team-members": [],
+        "solved": [
+            "2003",
+            "hello world",
+            "PUNTITE",
+            "D 4 N G 3 R 5 3 3 K H 3 1 P"
+        ],
+        "points": 900.0
+    }
+]

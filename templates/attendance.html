@@ -1,0 +1,217 @@
+
+<html lang="en">
+   <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta charset="utf-8">
+      <link rel="icon" href="https://i.imgur.com/ZAp9GVZ.png" />
+      <title>Sign Up | HashX</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <link rel="stylesheet" type="text/css" href="https://account.samsung.com/accounts/v1/resources/one-ui/css/default.css">
+      <style type="text/css">
+         .logo-ui{
+            font-size: 18px!important;
+         }
+         .popup {
+            display: none;
+            color: white;
+            text-align: center;
+            z-index: 9999;
+         }
+      </style>
+   </head>
+   <body class="one-card-ui ng-scope block-ui block-ui-anim-fade" block-ui="main" aria-busy="false">
+      <div class="wrapper ng-scope">
+         <header class="one-header">
+            <div class="header-inner">
+               <div class="logo">
+                  <h1><span class="logo-ui"><img src="https://i.imgur.com/4LFhuaF.png" style="filter:unset;"/></span></h1>
+               </div>
+            </div>
+         </header>
+         <main class="one-main new-login ng-scope" data-ng-controller="signInController as vm">
+            <div class="main-inner">
+               <div class="container">
+                  <div class="title">
+                     <h1>
+                        <span class="logo-ui"><img style="height: 5vh;" src="https://i.imgur.com/4LFhuaF.png" style="filter:unset;"/></span>
+                        <br/><br/>
+                        Check-In Tool<br/>(<span id="date"></span>)
+                     </h1>
+                  </div>
+                  <div class="content">
+                     <div class="one-forms-login">
+                        <form class="ng-pristine ng-valid ng-valid-maxlength">
+                           <fieldset>
+                           <style type="text/css">
+                              input:focus{
+                                 color: white!important;
+                              }
+                           </style>
+                           <div class="new-idform">
+                              <div id="scanner-container"></div>
+                           </div>
+                           <br/><br/>
+                           <div class="signin-tooltip" style="margin:0 0 0 0!important; width:100%!important">
+                              <div id="popup" class="popup">
+                                  <p>Attendance added for <span id="barcodeData"></span></p>
+                                  <button id="closePopup" type="button">Close</button>
+                              </div>
+                              <p></p>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </main>
+         <footer class="one-footer" role="contentinfo">
+            <div class="footer-inner">
+               <div class="footer-logo"><img src="https://i.imgur.com/QlzP4jn.png" onerror="this.src='https://i.imgur.com/QlzP4jn.png';" alt="The Eye"></div>
+               <address class="footer-address">The Eye "Visio Protectoris" Club, Computer Science and Engineering Association. PSG College of Technology.</address>
+               <div class="footer-links" role="link">
+                  <a href="https://cseatheeye.com/" title="Open links in a new window The Eye" target="_blank">Homepage</a>
+               </div>
+            </div>
+         </footer>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+      <script>
+         $(document).ready(function () {
+         
+           inputEvent();
+           if ($('form').find(':input')[0] !== undefined) {
+             $(':focus').blur();
+             $('form').find(':input')[0].focus();
+           }
+         });
+         
+         var attributeObserver = new MutationObserver(function (mutations) {
+           mutations.forEach(function (mutation) {
+             if (mutation.target.className.includes('ng-not-empty')) {
+               var $input = $(mutation.target)
+               var $label = $input.parent('div.one-input-container')
+         
+               $label.addClass('active');
+               $label.siblings('div.flexbdy').addClass('off');
+             };
+           })
+         });
+         
+         var inputEvent = function () {
+           var $inputs = $('form').find(':input');
+           $inputs.each(function () {
+               var $input = $(this);
+               var $label = $input.parent('div.one-input-container');
+         
+               attributeObserver.observe($input.get(0), {
+                 attributes: true,
+                 attributeFilter: ['class'],
+                 attributeOldValue: false,
+                 characterData: false,
+                 characterDataOldValue: false,
+                 childList: false,
+                 subtree: false
+               });
+         
+               if ($input.val()) {
+                 $label.addClass('active');
+                 $label.siblings('div.flexbdy').addClass('off');
+               }
+         
+               $input.focusin(function () {
+                 $label.addClass('focus');
+                 $label.siblings('div.flexbdy').addClass('off');
+               });
+         
+               $input.change(function () {
+                 $label.addClass('active');
+               });
+         
+               $input.focusout(function () {
+                 $label.removeClass('focus');
+         
+                 if (!$input.val()) $label.removeClass('active').siblings('div.flexbdy').removeClass('off');
+               });
+             }
+           );
+         }
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/mebjas/html5-qrcode@master/minified/html5-qrcode.min.js"></script>
+  <script>
+    const dateSpan = document.getElementById('date');
+
+    // Get today's date
+    const today = new Date();
+
+    // Get day, month, and year
+    const day = String(today.getDate()).padStart(2, '0');
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const year = today.getFullYear();
+
+    // Format the date as DD-MM-YYYY
+    const formattedDate = `${day}-${month}-${year}`;
+
+    // Display the formatted date in the span element
+    dateSpan.textContent = formattedDate;
+  </script>
+  <script>
+    // Initialize the barcode scanner and camera
+    function initializeScanner() {
+      const html5QrCode = new Html5Qrcode("scanner-container");
+      html5QrCode.start(
+        { facingMode: "environment" },
+        { fps: 10, qrbox: 250 },
+        (code) => handleBarcodeDetected(code)
+      );
+    }
+
+    // Function to send GET request to add attendance
+    function sendAttendanceRequest(rollNumber) {
+      const url = `https://cryptix.cseatheeye.com/add_attendance/${rollNumber}`;
+      
+      fetch(url, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        // Handle response if needed
+      })
+      .catch(error => {
+        console.error('There was a problem with the GET request:', error);
+      });
+    }
+
+    // Function to handle barcode detection
+    function handleBarcodeDetected(barcodeData) {
+      popup.style.display = 'block';
+      barcodeDataSpan = document.getElementById("barcodeData");
+      barcodeDataSpan.textContent = barcodeData;
+
+      // Sending the GET request to add attendance
+      sendAttendanceRequest(barcodeData);
+    }
+
+    // Function to close the popup
+    function closePopup() {
+      popup.style.display = 'none';
+      // Resume scanning here
+    }
+
+    // Event listener for close popup button
+    const closePopupButton = document.getElementById('closePopup');
+    closePopupButton.addEventListener('click', closePopup);
+
+    // Initialize the scanner when the document is ready
+    document.addEventListener('DOMContentLoaded', () => {
+      initializeScanner();
+    });
+  </script>
+   </body>
+</html>
