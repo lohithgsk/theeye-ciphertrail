@@ -32,10 +32,14 @@ Start the server
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+The Landing page of the application. <br><br>
+![App Screenshot](https://github.com/lohithgsk/theeye-ciphertrail/blob/main/static/homepage.png)
+
+Interactive Portal with a dynamic performance tracking and a leaderboard with secure login.<br><br>
+![App Screenshot](https://github.com/lohithgsk/theeye-ciphertrail/blob/main/static/portal.png)
 
 
 ## Feedback
 
-If you have any feedback, please reach out to us at fake@fake.com
+If you have any feedback, please reach out to us at theeye146@gmail.com.
 
