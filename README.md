@@ -1,6 +1,6 @@
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+<img src="https://github.com/lohithgsk/theeye-ciphertrail/blob/main/static/theye.png" alt="logo" width="500">
 
-Ciphertrail | CTF Portal
+# Ciphertrail | CTF Portal
 
     Unleash your hacking skills in a dynamic Capture The Flag (CTF) portal.
     
